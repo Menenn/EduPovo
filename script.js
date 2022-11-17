@@ -9,7 +9,7 @@ if(JSON.parse(localStorage.getItem("logins")) != null){
 var login;
 checkLogin();
 function checkLogin(){
-    if(JSON.parse(localStorage.getItem("logado") != null)){
+    if(JSON.parse(localStorage.getItem("logado")) != null){
         if(JSON.parse(localStorage.getItem("logado")).isLogado){
             logado = true;
         }else{
@@ -19,13 +19,21 @@ function checkLogin(){
         logado = false;
     }
 
-    if(logado != true && document.getElementById("registroNome") == null){
+    if(!logado && document.getElementById("registroNome") == null){
         console.log(window.location.href);
         //window.open("login.html", "_self");
         location.href = "login.html";
     }
+    if(logado && document.getElementById("registroNome") != null){
+        location.href = "index.html";
+    }
     console.log("Rodando a consulta de login cada vez que recarregar a página, logado:" + logado);
 
+}
+
+function Logout(){
+    var InfoLogin = { Nome: "", Email: "", isLogado: false}
+    localStorage.setItem("logado", JSON.stringify(InfoLogin));
 }
 
 function registrar(){
@@ -66,6 +74,10 @@ function registrar(){
 
     logins.push(addarray);
     localStorage.setItem("logins", JSON.stringify(logins));
+    alert("Registrado com sucesso! Utilize seu E-mail e senha para login!");
+    document.getElementById("registroNome").value = "";
+    document.getElementById("registroEmail").value = "";
+    document.getElementById("registroSenha").value = "";
     console.log(logins);
 }
 
@@ -87,7 +99,13 @@ function login(){
                     //window.open("login.html");
                     location.href = "index.html";
                     return;
+                }else{
+                    alert("A senha não corresponde ao E-mail informado!");
+                    document.getElementById("loginSenha").value = "";
                 }
+            }else{
+                alert("E-mail não encontrado!");
+                document.getElementById("loginEmail").value = "";
             }
         });
     }
