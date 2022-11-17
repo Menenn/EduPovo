@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Menenn/Imgs/main/EdupovoIcon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>EduPovo - Matérias</title>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <div style="display: flex; justify-content: center;">
+            <a href="index.html">
+                <img id="logo" src="https://raw.githubusercontent.com/Menenn/Imgs/main/Edupovo.png" style="border-radius: 50%; width: 9vw;">
+            </a>
+        </div>
+
+        <div style="display: flex; justify-content: center;">
+            <a href="index.html" style="text-decoration: none; color: white;">
+                <h1 style="font-size: 3vw; font-family: 'Bebas Neue';">EduPovo</h1>
+            </a>
+        </div>
+
+        <p style="margin: 0; font-size: 1.4vw; font-family: 'Bebas Neue'">Buscar</p>
+        <input type="text" id="input-menu">
+
+        <button class="btn-menu" onclick="parent.location='materias.html'" style="background-color: #00b4d8;">Matérias</button>
+        <button class="btn-menu" onclick="parent.location='planoestudo.html'">Plano de estudo</button>
+        <button class="btn-menu">Correções de provas</button>
+        <button class="btn-menu" onclick="parent.location='aulasaovivo.html'">Aulas ao vivo</button>
+        <button class="btn-menu">Simulados</button>
+
+        <p style="font-size: 1.4vw; margin: 0; font-family: 'Bebas Neue'">Explorar</p>
+        <button class="btn-menu">Provas</button>
+        <button class="btn-menu" onclick="parent.location='videoaulas.html'">Vídeoaulas</button>
+        <button class="btn-menu" onclick="parent.location='exercicios.html'">Exercícios</button>
+    </div>
+
+    <div id="mainDiv" style="margin-left: 15.1vw;">
+        <div id="div01">
+            <h1 style="color: #24292d; font-size: 3.5vw; font-family: 'Bebas Neue';">Matérias</h1>
+        </div>
+
+        <div id="materias">
+            <div style="margin-top: 2vw;">
+                <h2 style="font-size: 2.6vw; cursor: pointer; position: relative;" onclick="changeNav('Mat1')"">Ciências <img src="https://www.iconpacks.net/icons/2/free-arrow-down-icon-3101-thumb.png" style="width: 3vw; height: 6vh; position: absolute; right: 2%;" alt=""></h2>
+                <div id="Mat1" style="display: none;">
+                    <h3 style="font-size: 1.5vw;">• Ainda não possui módulos</h3>
+                </div>
+            </div>
+
+            <div style="margin-top: 2vw;">
+                <h2 style="font-size: 2.6vw; cursor: pointer; position: relative;" onclick="changeNav('Mat2')">Matemática <img src="https://www.iconpacks.net/icons/2/free-arrow-down-icon-3101-thumb.png" style="width: 3vw; height: 6vh; position: absolute; right: 2%;" alt=""></h2>
+                <div id="Mat2" style="display: none;">
+                    <h3 style="font-size: 1.5vw;">• Ainda não possui módulos</h3>
+                </div>
+            </div>
+
+            <div style="margin-top: 2vw;">
+                <h2 style="font-size: 2.6vw; cursor: pointer; position: relative;" onclick="changeNav('Mat3')">Português <img src="https://www.iconpacks.net/icons/2/free-arrow-down-icon-3101-thumb.png" style="width: 3vw; height: 6vh; position: absolute; right: 2%;" alt=""></h2>
+                <div id="Mat3" style="display: none;">
+                    <h3 style="font-size: 1.5vw;">• Ainda não possui módulos</h3>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>

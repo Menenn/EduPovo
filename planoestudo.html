@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Menenn/Imgs/main/EdupovoIcon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>EduPovo - Plano de Estudo</title>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <div style="display: flex; justify-content: center;">
+            <a href="index.html">
+                <img id="logo" src="https://raw.githubusercontent.com/Menenn/Imgs/main/Edupovo.png" style="border-radius: 50%; width: 9vw;">
+            </a>
+        </div>
+
+        <div style="display: flex; justify-content: center;">
+            <a href="index.html" style="text-decoration: none; color: white;">
+                <h1 style="font-size: 3vw; font-family: 'Bebas Neue';">EduPovo</h1>
+            </a>
+        </div>
+
+        <p style="margin: 0; font-size: 1.4vw; font-family: 'Bebas Neue'">Buscar</p>
+        <input type="text" id="input-menu">
+
+        <button class="btn-menu" onclick="parent.location='materias.html'">Matérias</button>
+        <button class="btn-menu" onclick="parent.location='planoestudo.html'" style="background-color: #00b4d8;">Plano de estudo</button>
+        <button class="btn-menu">Correções de provas</button>
+        <button class="btn-menu" onclick="parent.location='aulasaovivo.html'">Aulas ao vivo</button>
+        <button class="btn-menu">Simulados</button>
+
+        <p style="font-size: 1.4vw; margin: 0; font-family: 'Bebas Neue'">Explorar</p>
+        <button class="btn-menu">Provas</button>
+        <button class="btn-menu" onclick="parent.location='videoaulas.html'">Vídeoaulas</button>
+        <button class="btn-menu" onclick="parent.location='exercicios.html'">Exercícios</button>
+    </div>
+
+    <div id="mainDiv" style="margin-left: 15.1vw;">
+        <div id="div01">
+            <h1 style="color: #24292d; font-size: 3.5vw; font-family: 'Bebas Neue';">Plano de estudo</h1>
+        </div>
+
+        <div id="planoestudo">
+            <table>
+                <tr>
+                  <th style="background-color: #0077b6;"></th>
+                  <th style="background-color: #0077b6;">Segunda</th>
+                  <th style="background-color: #0077b6;">Terça</th>
+                  <th style="background-color: #0077b6;">Quarta</th>
+                  <th style="background-color: #0077b6;">Quinta</th>
+                  <th style="background-color: #0077b6;">Sexta</th>
+                </tr>
+                <tr>
+                  <td style="background-color: #0077b6;">08h-10h</td>
+                  <td class="fontePE">Matemática</td>
+                  <td class="fontePE">Ciências</td>
+                  <td class="fontePE">Português</td>
+                  <td class="fontePE">Matemática</td>
+                  <td class="fontePE">Ciências</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #0077b6;">10h-12h</td>
+                    <td class="fontePE">Ciências</td>
+                    <td class="fontePE">Português</td>
+                    <td class="fontePE">Matemática</td>
+                    <td class="fontePE">Ciências</td>
+                    <td class="fontePE">Português</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #0077b6;">Intervalo (1h)</td>
+                    <td class="fontePE">Intervalo</td>
+                    <td class="fontePE">Intervalo</td>
+                    <td class="fontePE">Intervalo</td>
+                    <td class="fontePE">Intervalo</td>
+                    <td class="fontePE">Intervalo</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #0077b6;">13h-15h</td>
+                    <td class="fontePE">Português</td>
+                    <td class="fontePE">Matematica</td>
+                    <td class="fontePE">Ciências</td>
+                    <td class="fontePE">Português</td>
+                    <td class="fontePE">Matemática</td>
+                </tr>
+                </table>
+        </div>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
