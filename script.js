@@ -27,6 +27,10 @@ function checkLogin(){
     if(logado && document.getElementById("registroNome") != null){
         location.href = "index.html";
     }
+
+    if(document.getElementById("userName") != null){
+        document.getElementById("userName").innerText = "" + JSON.parse(localStorage.getItem("logado")).Nome;
+    }
     console.log("Rodando a consulta de login cada vez que recarregar a página, logado:" + logado);
 
 }
